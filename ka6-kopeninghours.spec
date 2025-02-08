@@ -28,7 +28,7 @@ BuildRequires:	kf6-kholidays-devel >= 5.77
 BuildRequires:	kf6-ki18n-devel >= 5.77
 BuildRequires:	ninja
 BuildRequires:	pkgconfig
-BuildRequires:	python3-devel >= 3.6
+BuildRequires:	python3-devel >= 1:3.6
 BuildRequires:	qt6-build >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.605
 BuildRequires:	shared-mime-info >= 1.0
