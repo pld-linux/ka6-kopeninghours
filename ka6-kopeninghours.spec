@@ -7,12 +7,12 @@
 %define		kaname		kopeninghours
 Summary:	A library for parsing and evaluating OSM opening hours expressions
 Name:		ka6-%{kaname}
-Version:	24.12.1
+Version:	24.12.2
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	7627273e5384a1d947eb16fbb93b4b8d
+# Source0-md5:	667b7773f3f397e4b51ac2c063727581
 Patch0:		boost-cmake.patch
 URL:		https://community.kde.org/
 BuildRequires:	Qt6Core-devel >= 5.15.2
