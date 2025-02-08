@@ -13,6 +13,7 @@ License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
 # Source0-md5:	7627273e5384a1d947eb16fbb93b4b8d
+Patch0:		boost-cmake.patch
 URL:		https://community.kde.org/
 BuildRequires:	Qt6Core-devel >= 5.15.2
 BuildRequires:	Qt6Network-devel >= 5.15.2
@@ -56,6 +57,7 @@ Pliki nagłówkowe dla programistów używających %{kaname}.
 
 %prep
 %setup -q -n %{kaname}-%{version}
+%patch -P0 -p1
 # correct python components install dir
 sed -i "s:set(_install_dir lib:set(_install_dir %{_libdir}:g" PyKOpeningHours/CMakeLists.txt
 
