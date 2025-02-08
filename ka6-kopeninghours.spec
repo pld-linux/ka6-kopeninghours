@@ -22,7 +22,7 @@ BuildRequires:	bison
 BuildRequires:	boost-python3-devel
 BuildRequires:	cmake >= 3.20
 BuildRequires:	flex
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	kf6-extra-cmake-modules >= 5.44
 BuildRequires:	kf6-kholidays-devel >= 5.77
 BuildRequires:	kf6-ki18n-devel >= 5.77
