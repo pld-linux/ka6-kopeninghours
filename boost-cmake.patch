@@ -1,11 +1,12 @@
---- kopeninghours-24.12.1/PyKOpeningHours/CMakeLists.txt.orig	2025-01-02 13:56:05.000000000 +0100
-+++ kopeninghours-24.12.1/PyKOpeningHours/CMakeLists.txt	2025-02-08 13:01:58.512649828 +0100
-@@ -22,7 +22,7 @@
+diff -up kopeninghours-25.04.0/PyKOpeningHours/CMakeLists.txt.orig kopeninghours-25.04.0/PyKOpeningHours/CMakeLists.txt
+--- kopeninghours-25.04.0/PyKOpeningHours/CMakeLists.txt.orig	2025-04-07 22:47:14.000000000 +0200
++++ kopeninghours-25.04.0/PyKOpeningHours/CMakeLists.txt	2025-04-17 16:24:34.644052275 +0200
+@@ -22,7 +22,7 @@ target_compile_definitions(PyKOpeningHou
  
  # Set up the libraries and header search paths for this target
- target_link_libraries(PyKOpeningHours PUBLIC ${Boost_LIBRARIES} ${PYTHON_LIBRARIES} KOpeningHours)
--target_include_directories(PyKOpeningHours PRIVATE ${Boost_INCLUDE_DIR} ${PYTHON_INCLUDE_DIRS})
-+target_include_directories(PyKOpeningHours PRIVATE ${Boost_INCLUDE_DIRS} ${PYTHON_INCLUDE_DIRS})
+ target_link_libraries(PyKOpeningHours PUBLIC ${Boost_LIBRARIES} Python::Python KOpeningHours)
+-target_include_directories(PyKOpeningHours PRIVATE ${Boost_INCLUDE_DIR})
++target_include_directories(PyKOpeningHours PRIVATE ${Boost_INCLUDE_DIRS})
  
- set(_install_dir lib/python${PYTHONLIBS_VERSION_MAJOR}.${PYTHONLIBS_VERSION_MINOR}/site-packages)
+ set(_install_dir lib/python${Python_VERSION_MAJOR}.${Python_VERSION_MINOR}/site-packages)
  
