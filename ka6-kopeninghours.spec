@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kopeninghours
 Summary:	A library for parsing and evaluating OSM opening hours expressions
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	2
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	ca7630f8f162973326c0f3cb4dbcb364
+# Source0-md5:	3c273278fa333c74d33068a98865d45f
 Patch0:		boost-cmake.patch
 URL:		https://community.kde.org/
 BuildRequires:	Qt6Core-devel >= 5.15.2
@@ -93,7 +93,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README.md
 %ghost %{_libdir}/libKOpeningHours.so.1
-%attr(755,root,root) %{_libdir}/libKOpeningHours.so.*.*
+%{_libdir}/libKOpeningHours.so.*.*
 %dir %{py3_sitedir}/PyKOpeningHours
 %{py3_sitedir}/PyKOpeningHours/PyKOpeningHours.pyi
 %attr(755,root,root) %{py3_sitedir}/PyKOpeningHours/PyKOpeningHours.so
@@ -101,7 +101,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/qt6/qml/org/kde/kopeninghours
 %{_libdir}/qt6/qml/org/kde/kopeninghours/kde-qmlmodule.version
 %{_libdir}/qt6/qml/org/kde/kopeninghours/kopeninghoursqmlplugin.qmltypes
-%attr(755,root,root) %{_libdir}/qt6/qml/org/kde/kopeninghours/libkopeninghoursqmlplugin.so
+%{_libdir}/qt6/qml/org/kde/kopeninghours/libkopeninghoursqmlplugin.so
 %{_libdir}/qt6/qml/org/kde/kopeninghours/qmldir
 %{_datadir}/qlogging-categories6/org_kde_kopeninghours.categories
 
